@@ -36,7 +36,7 @@ module.exports = {
         }
       ],
       {
-        ignore: ["css/*", "js/*"]
+        ignore: ["css/**", "js/**"]
       }
     ),
     new webpack.LoaderOptionsPlugin({
