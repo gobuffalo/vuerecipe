@@ -5,8 +5,8 @@ import Vue from "vue";
 import VueRouter from "router";
 Vue.use(VueRouter);
 
-import AppComponent from "./components/app/app";
-import BandComponent from "./components/band/band";
+import AppComponent from "./components/app.vue";
+import BandComponent from "./components/band.vue";
 
 const routes = [
   {path: "/band/:id", component: BandComponent, name: "showBand"},

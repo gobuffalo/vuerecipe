@@ -1,9 +1,24 @@
-import Vue from "vue";
-import template from "./template.html";
+<template>
+<div>
+  <h1 class="page-header">{{band.name}}</h1>
 
-const BandComponent = Vue.extend({
-  template,
+  <blockquote>
+    {{band.bio}}
+  </blockquote>
 
+  <ul class="list-unstyled">
+    <li v-for="member in members">
+      <h2>
+        {{member.name}} - {{member.instrument}}
+      </h2>
+    </li>
+  </ul>
+
+</div>
+</template>
+
+<script charset="utf-8">
+export default {
   data() {
     return {
       band: {},
@@ -34,6 +49,5 @@ const BandComponent = Vue.extend({
       });
     }
   }
-});
-
-export default BandComponent;
+};
+</script>

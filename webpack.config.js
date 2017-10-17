@@ -54,6 +54,10 @@ module.exports = {
         loader: "raw-loader"
       },
       {
+        test: /\.vue/,
+        loader: "vue-loader"
+      },
+      {
         test: /\.jsx?$/,
         loader: "babel-loader",
         exclude: /node_modules/
