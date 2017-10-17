@@ -1,5 +1,5 @@
 {
-  "name": "vueband",
+  "name": "vuerecipe",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -20,10 +20,13 @@
     "node-sass": "~4.5.3",
     "npm-install-webpack-plugin": "4.0.4",
     "path": "~0.12.7",
+    "raw-loader": "^0.5.1",
     "sass-loader": "~6.0.5",
     "style-loader": "~0.18.2",
     "uglifyjs-webpack-plugin": "~0.4.6",
     "url-loader": "~0.5.9",
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1",
     "webpack": "~2.3.0",
     "webpack-manifest-plugin": "~1.2.1"
   }

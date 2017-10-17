@@ -2,8 +2,8 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:development as builder
 
-RUN mkdir -p $GOPATH/src/github.com/markbates/vueband
-WORKDIR $GOPATH/src/github.com/markbates/vueband
+RUN mkdir -p $GOPATH/src/github.com/gobuffalo/vuerecipe
+WORKDIR $GOPATH/src/github.com/gobuffalo/vuerecipe
 
 # this will cache the npm install step, unless package.json changes
 ADD package.json .

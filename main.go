@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 
-  "github.com/markbates/vueband/actions"
-  "github.com/gobuffalo/envy"
+	"github.com/gobuffalo/envy"
+	"github.com/gobuffalo/vuerecipe/actions"
 )
 
 func main() {

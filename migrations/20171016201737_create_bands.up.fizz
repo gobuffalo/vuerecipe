@@ -1,0 +1,5 @@
+create_table("bands", func(t) {
+	t.Column("id", "uuid", {"primary": true})
+	t.Column("name", "string", {})
+	t.Column("bio", "text", {})
+})

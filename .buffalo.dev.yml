@@ -14,7 +14,7 @@ included_extensions:
 - .go
 build_path: tmp
 build_delay: 200ns
-binary_name: <no value>-build
+binary_name: vueband-build
 command_flags: []
 enable_colors: true
 log_name: buffalo

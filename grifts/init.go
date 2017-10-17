@@ -1,10 +1,10 @@
 package grifts
 
 import (
-  "github.com/gobuffalo/buffalo"
-	"github.com/markbates/vueband/actions"
+	"github.com/gobuffalo/buffalo"
+	"github.com/gobuffalo/vuerecipe/actions"
 )
 
 func init() {
-  buffalo.Grifts(actions.App())
+	buffalo.Grifts(actions.App())
 }

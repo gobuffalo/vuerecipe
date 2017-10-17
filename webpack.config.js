@@ -12,6 +12,12 @@ module.exports = {
       "./assets/css/application.scss"
     ]
   },
+  resolve: {
+    alias: {
+      vue$: `${__dirname}/node_modules/vue/dist/vue.esm.js`,
+      router$: `${__dirname}/node_modules/vue-router/dist/vue-router.esm.js`
+    }
+  },
   output: {
     filename: "[name].[hash].js",
     path: `${__dirname}/public/assets`
@@ -43,6 +49,10 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.html$/,
+        loader: "raw-loader"
+      },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
