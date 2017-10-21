@@ -2,22 +2,30 @@ require("expose-loader?$!expose-loader?jQuery!jquery");
 require("bootstrap-sass/assets/javascripts/bootstrap.js");
 
 import Vue from "vue";
-import VueRouter from "router";
-Vue.use(VueRouter);
 
-import AppComponent from "./components/app.vue";
-import BandComponent from "./components/band.vue";
+/**
+ *  Since we're using the runtime build of Vue, we're going to have to
+ *  pass it to the window for the router to see it. Nevertheless, it 
+ *  cleans up this file nicely.
+ */
 
-const routes = [
-  {path: "/band/:id", component: BandComponent, name: "showBand"},
-  {path: "/", component: AppComponent}
-];
+window.Vue = Vue;
 
-const router = new VueRouter({
-  mode: "history",
-  routes
-});
+/**
+ * Pass axios to the window, that way all our .vue files can
+ * see it and use it freely without having to import to each file.
+ * 
+ * Axios also has really really nice documentation to help you out!
+ * It may look slightly difference to what I've written in the vue files,
+ * because I've used ES6 syntax.
+ * 
+ * https://github.com/axios/axios
+ */
 
-const app = new Vue({
-  router
-}).$mount("#app");
+window.axios = require('axios');
+
+/**
+ * Require our router that we've nicely sat VueRouter inside of to
+ * keep our base app.js clean.
+ */
+require('./router.js')
