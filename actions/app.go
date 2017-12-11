@@ -58,8 +58,7 @@ func App() *buffalo.App {
 
 		api := app.Group("/api")
 		band := api.Resource("/bands", BandsResource{&buffalo.BaseResource{}})
-		members := band.Resource("/members", MembersResource{&buffalo.BaseResource{}})
-		members.Use(loadBand)
+		band.Resource("/members", MembersResource{&buffalo.BaseResource{}})
 
 		app.GET("/{path:.+}", HomeHandler)
 		app.GET("/", HomeHandler)

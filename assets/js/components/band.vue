@@ -1,19 +1,16 @@
 <template>
 <div>
-  <h1 class="page-header">{{band.name}}</h1>
-
-  <blockquote>
-    {{band.bio}}
-  </blockquote>
+  <h1 class="page-header">Bands</h1>
 
   <ul class="list-unstyled">
-    <li v-for="member in members">
-      <h2>
-        {{member.name}} - {{member.instrument}}
-      </h2>
+    <li v-for="band in bands">
+      <router-link :to='{name: "showBand", params: {id: band.id}}'>
+        <h2>
+          {{ band.name }}
+        </h2>
+      </router-link>
     </li>
   </ul>
-
 </div>
 </template>
 
@@ -21,8 +18,7 @@
 export default {
   data() {
     return {
-      band: {},
-      members: {}
+      bands: []
     };
   },
 
@@ -36,16 +32,9 @@ export default {
 
   methods: {
     fetchData: function() {
-      let id = this.$route.params.id;
-
-      let req = $.getJSON(`/api/bands/${id}`);
+      let req = $.getJSON("/api/bands");
       req.done(data => {
-        this.band = data;
-      });
-
-      req = $.getJSON(`/api/bands/${id}/members`);
-      req.done(data => {
-        this.members = data;
+        this.bands = data;
       });
     }
   }

@@ -39,11 +39,11 @@ SET default_with_oids = false;
 --
 
 CREATE TABLE bands (
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
     id uuid NOT NULL,
     name character varying(255) NOT NULL,
-    bio text NOT NULL
+    bio text NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
 );
 
 
@@ -54,12 +54,12 @@ ALTER TABLE bands OWNER TO postgres;
 --
 
 CREATE TABLE members (
-    created_at timestamp without time zone NOT NULL,
-    updated_at timestamp without time zone NOT NULL,
     id uuid NOT NULL,
     name character varying(255) NOT NULL,
     instrument character varying(255) NOT NULL,
-    band_id uuid NOT NULL
+    band_id uuid NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
 );
 
 
