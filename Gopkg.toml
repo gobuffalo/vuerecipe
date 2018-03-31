@@ -39,15 +39,15 @@
 
 [[constraint]]
   branch = "master"
-  name = "github.com/markbates/grift"
+  name = "github.com/gobuffalo/grift"
 
 [[constraint]]
-  name = "github.com/markbates/pop"
+  name = "github.com/gobuffalo/pop"
   version = "3.41.1"
 
 [[constraint]]
   branch = "master"
-  name = "github.com/markbates/validate"
+  name = "github.com/gobuffalo/validate"
 
 [[constraint]]
   name = "github.com/pkg/errors"
