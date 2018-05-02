@@ -100,10 +100,10 @@ CREATE INDEX members_band_id_idx ON members USING btree (band_id);
 
 
 --
--- Name: version_idx; Type: INDEX; Schema: public; Owner: postgres
+-- Name: schema_migration_version_idx; Type: INDEX; Schema: public; Owner: postgres
 --
 
-CREATE UNIQUE INDEX version_idx ON schema_migration USING btree (version);
+CREATE UNIQUE INDEX schema_migration_version_idx ON schema_migration USING btree (version);
 
 
 --
