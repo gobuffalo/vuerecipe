@@ -30,7 +30,7 @@ func (v MembersResource) List(c buffalo.Context) error {
 	// Get the DB connection from the context
 	tx, ok := c.Value("tx").(*pop.Connection)
 	if !ok {
-		return errors.WithStack(errors.New("no transacation found"))
+		return errors.WithStack(errors.New("no transaction found"))
 	}
 
 	members := &models.Members{}
